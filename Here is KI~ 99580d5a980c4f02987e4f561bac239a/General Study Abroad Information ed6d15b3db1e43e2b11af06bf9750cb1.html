@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>General Study Abroad Information</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ed6d15b3-db1e-43e2-b11a-f06bf9750cb1" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🇸🇬</span></div><h1 class="page-title">General Study Abroad Information</h1></header><div class="page-body"><p id="30f86c5d-3d50-4d1d-9171-b42e42d49e63" class=""><strong>Check emails regularly to ensure no important information is missed. It&#x27;s also recommended to save all emails in one folder for ease of review.</strong></p><p id="6b772248-2732-49ea-9c03-9042c229d406" class="">
+</p><ol type="1" id="e22db559-9dc9-49d5-bed5-bf1e9328adb6" class="numbered-list" start="1"><li>Visa Procedure</li></ol><ul id="3059892f-7e8b-4727-a621-92a3e488f102" class="bulleted-list"><li style="list-style-type:disc">I hold an <strong>HKSAR Passport</strong>.</li></ul><ul id="26b23963-8b66-4dad-b94a-8ecaef8a73ef" class="bulleted-list"><li style="list-style-type:disc">Pre-Arrival: Student’s Pass (STP) application procedures would be done via the GEM Trailblazer Exchange/Study Abroad Portal. Applications must be submitted at least one month before start of semester.</li></ul><ul id="95782cdc-1fd4-42f9-bf4f-4681dac15a43" class="bulleted-list"><li style="list-style-type:disc">Attend Offsite Formalities Exercise for Student’s Pass at NTU (preferred, appointment is needed) or Make e-appointment to complete the Student’s Pass formalities at the ICA building</li></ul><ul id="cab33317-774a-4e7d-adcf-57a5c8ba7542" class="bulleted-list"><li style="list-style-type:disc">Required documents: eForm16 (SOLAR website), In-Principal Approval (IPA) letter, Photos, Valid Passport, NTU Letter of Enrolment</li></ul><ul id="1200f324-1be7-42e7-95e7-32a894ddf8e6" class="bulleted-list"><li style="list-style-type:disc">Fee: 30 SGD (Processing Fee) + 60 SGD (Student Pass Issuance Fee)</li></ul><p id="aa568a28-a234-49f0-b0ac-f332f4b130b1" class="">
+</p><ol type="1" id="e8bb035a-2745-4dbc-ae37-416cfda9cbcf" class="numbered-list" start="2"><li>Orientation Activities</li></ol><ul id="acc2cc1c-d07d-47c4-9faa-b1f702c4f0a3" class="bulleted-list"><li style="list-style-type:disc">Before departure, online Q&amp;A sessions are available for us to ask questions.</li></ul><ul id="8684b226-2f88-458d-b145-b4e5538d9aff" class="bulleted-list"><li style="list-style-type:disc">Before the semester starts, there will be an orientation talk. The PowerPoint presentation used during the talk will be sent out in a later email.</li></ul><ul id="476f8b8f-52a5-4450-8068-4ab5d0ee7998" class="bulleted-list"><li style="list-style-type:disc">Other orientation activities are available for exchange students, but spaces are limited. Be sure to check your emails regularly if you&#x27;d like to join.</li></ul><p id="035f188f-e1f0-43a4-9a1e-a97363767c9a" class="">
+</p><ol type="1" id="a5d08983-ce31-42a0-b924-81b7b1198059" class="numbered-list" start="3"><li>International Services &amp; Activities</li></ol><ul id="aef03aff-9736-4689-a173-ab5f8a6225f1" class="bulleted-list"><li style="list-style-type:disc">The GEM Club would organise some activities for exchange students to join during the semester. Since slots are limited, be sure to check your emails frequently and sign up quickly if you would like to join these events<figure id="20a06de2-5267-44a3-958d-abe9249e579f"><a href="https://www.instagram.com/ntugemclub/" class="block-color-orange_background bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.instagram.com/ntugemclub/</div></div></a></figure></li></ul><ul id="460f1aba-902a-4517-9aa1-4618e7a45b39" class="bulleted-list"><li style="list-style-type:disc">There is a GEM Club Buddy Program for exchange students to join. The program is aimed at providing a chance for us to get to know local students or other exchange students. The actual activities depend on us and our buddies. I personally love this buddy program, as I have made some very good friends through it!</li></ul><ul id="e0a3d3f7-6bf8-4507-b087-cde62e30093a" class="bulleted-list"><li style="list-style-type:disc">There is no pick-up services provides by NTU ( I would mention the transportation in 11)</li></ul><p id="2d758837-e13f-4d52-9120-00abd9a96a06" class="">
+</p><ol type="1" id="d1e200d0-2b07-4295-9f6e-f3cece5e03c1" class="numbered-list" start="4"><li>Accommodations</li></ol><ul id="4c9fe65c-fa9e-4499-bb8f-5ab42c9e0a9c" class="bulleted-list"><li style="list-style-type:disc">Undergraduate housing in NTU <figure id="b1ebfb07-b045-4cd1-8ca1-ccee0e05720e"><a href="https://www.ntu.edu.sg/life-at-ntu/accommodation/undergraduate-housing" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Undergraduate Housing</div><div class="bookmark-description">Enhance your student life and learning experience by signing up for a place in one of our halls of residence.</div></div><div class="bookmark-href"><img src="https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png" class="icon bookmark-icon"/>https://www.ntu.edu.sg/life-at-ntu/accommodation/undergraduate-housing</div></div><img src="https://www.ntu.edu.sg/images/default-source/default-album/ntu-thehive-775x465.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="c9b5770c-b0d1-4aa6-b6e1-d5f30bfa68b5" class="bulleted-list"><li style="list-style-type:disc">Dorms provide various options for students: single or double rooms with or without air conditioning. The cost of the hall depends on the room type. Unfortunately, there is no guarantee of which type of room you will be assigned.</li></ul><ul id="31ea0bc6-fc37-42ed-a731-3ac7be41248b" class="bulleted-list"><li style="list-style-type:disc">Hall assignments are done randomly. I was assigned to Hall 8 (Double, Air-Conditioned) for the period of 4 August to 9 December 2022. My hall fee is 1389.65 SGD (7770.99 HKD). My roommate is a local Singaporean.</li></ul><ul id="d2781a22-7f92-4ce4-b7aa-2fc7ad0f21b2" class="bulleted-list"><li style="list-style-type:disc">Application Procedure: Through the <em>GEM Trailblazer Exchange/Study Abroad Portal</em></li></ul><ul id="a1ceffd6-82c2-4df7-9e63-d1f50a54c924" class="bulleted-list"><li style="list-style-type:disc">The hall payment will be made after your arrival in Singapore. NTU will send an email about the hall payment near the end of October. Please note that there may be additional charges if you are late.</li></ul><ul id="46b62d97-0354-4ec7-97a5-5df90dca52d5" class="bulleted-list"><li style="list-style-type:disc">Early check-in to the hall is not permitted. Hall movement request have to be made on the One Stop Portal (NTU online services) at least one month before the check-out date. Submitting requests late may result in not receiving a refund.</li></ul><ul id="25fd1926-0e31-4d6f-b2b8-a557c2d39cc5" class="bulleted-list"><li style="list-style-type:disc">No meal-plans available in NTU</li></ul><p id="5659ba92-0aa4-434c-9a19-134c0a175132" class="">
+</p><ol type="1" id="25e67325-dda9-4729-8502-c96be730c641" class="numbered-list" start="5"><li>Course Registration</li></ol><ul id="274cfffd-7d03-4d01-a77c-a9636d38e71d" class="bulleted-list"><li style="list-style-type:disc">Course Registration is done on the <em>GEM Trailblazer Exchange/Study Abroad Portal</em> and <em>NTU STARS</em></li></ul><ul id="afaa202a-cdc1-4bc3-b2ad-d2dc3b60d343" class="bulleted-list"><li style="list-style-type:disc">Exchange Students would have to first submit a maximum of 10 courses for approval before the start of the semester through the portal.</li></ul><ul id="43fdde92-635d-4991-b40c-a6444917b50f" class="bulleted-list"><li style="list-style-type:disc">Then we can register the approved courses on the <em>STARS</em> system when enrollment period starts</li></ul><ul id="d1aededb-ccff-487b-b1ee-d0a142fd2d49" class="bulleted-list"><li style="list-style-type:disc">We can still make request for more approved course during the enrollment and add-drop period.</li></ul><p id="8e22000f-0e55-4927-bf93-182d6c766659" class="">
+</p><ol type="1" id="e81e5fde-4238-4148-980d-895e1e648bda" class="numbered-list" start="6"><li>Teaching &amp; Assessment Methods</li></ol><ul id="5a612c52-6879-4847-8bc1-d170b0c7f07c" class="bulleted-list"><li style="list-style-type:disc">Depending on the courses, it is suggested that you check the course information in advance before enrolling.<figure id="fb1ace2d-5c5c-45f3-890a-a5906094ec34"><a href="https://wis.ntu.edu.sg/webexe/owa/aus_subj_cont.main" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Content of Courses</div></div><div class="bookmark-href"><img src="https://wis.ntu.edu.sg/favicon.ico" class="icon bookmark-icon"/>https://wis.ntu.edu.sg/webexe/owa/aus_subj_cont.main</div></div></a></figure></li></ul><ul id="49ad5825-2741-4968-8ca3-363791bfa783" class="bulleted-list"><li style="list-style-type:disc">NTU uses the <em>Blackboard</em> system (NTU LEARN), which is a similar platform to <em>Canvas</em>.<figure id="bd2bbce0-201f-4b6d-a4b2-e43c25e487ef"><a href="https://ntulearn.ntu.edu.sg/ultra/institution-page" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sign In</div></div><div class="bookmark-href">https://ntulearn.ntu.edu.sg/ultra/institution-page</div></div></a></figure></li></ul><p id="994b1d19-6008-4d98-af10-3a0bc8a73877" class="">
+</p><ol type="1" id="af4fb71a-60ea-46e5-afdf-b237578bf506" class="numbered-list" start="7"><li>Finance &amp; Banking</li></ol><ul id="5046e15a-7a74-402f-91cc-bd318588c5d1" class="bulleted-list"><li style="list-style-type:disc">Currency: 1 SGD ≈ 6HKD (<span style="border-bottom:0.05em solid">1 SGD = 5.84111 HKD</span><strong>  </strong>Feb 24, 2023)</li></ul><ul id="60931426-823f-47a2-9eb0-abad552bb81a" class="bulleted-list"><li style="list-style-type:disc">It is good to exchange some SGD in HK and bring them with you to Singapore so that you have some SGD cash to used upon arrivial</li></ul><ul id="8f46cafb-e2c7-4426-afcf-0d7e75900326" class="bulleted-list"><li style="list-style-type:disc">The student cards have <em>NETS FlashPay</em>, it can be used for cashless payment inside NTU, transportation and <strong>very few</strong> stores outside. It is similar to Octopus card in HK. The card can be topped up at MRT stations and convenience stores. (convenience store has additional charge for top-up)</li></ul><ul id="f8bcebe8-c8a0-4dd4-97f8-1fa7ba682a08" class="bulleted-list"><li style="list-style-type:disc">I personally recommend opening a bank account after arriving in Singapore. I applied for a <em>DBS</em> account online, and it took about one week to process my application. Since I was staying in a hall, I was able to request proof of residence online through the <em>NTU One Stop Portal</em> and pick it up at the hall admin office.</li></ul><ul id="4d37de5c-3c50-4082-a402-d67bbdc2ba81" class="bulleted-list"><li style="list-style-type:disc">After applying for a <em>DBS </em>bank account, you can use the debit card, <em>Paylah!</em>, and other cashless payment methods. I regret not opening a bank account earlier during my exchange period, as it is much more convenient and allows you to keep your money safe in the bank. With a bank account, you can make cashless payments almost anywhere in Singapore, and easily transfer money to your friends (PAYNOW). You can also do online shopping and use food delivery service!<figure id="80ea4646-0b40-4c98-8cbc-9693836e2935"><a href="https://www.dbs.com.sg/personal/deposits/savings-accounts/my-account?cid=sg:en:cbg:dbs:sem:goo:na:txt:casa:casa-cen-sem:dbs-l2-deposit-brand-yg:na&amp;gclid=Cj0KCQiAutyfBhCMARIsAMgcRJSX2gGE-JLFNjxWEMLaCHPsoWakGt4Eo4UbeAlleX5JHGyQvOzbQEUaAnCfEALw_wcB&amp;gclsrc=aw.ds" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">My Account - Open Multi Currency Account Instantly | DBS Singapore</div><div class="bookmark-description">The one account that meets your deposit needs, customised to the way you live.</div></div><div class="bookmark-href"><img src="https://www.dbs.com.sg/favicon.ico" class="icon bookmark-icon"/>https://www.dbs.com.sg/personal/deposits/savings-accounts/my-account?cid=sg:en:cbg:dbs:sem:goo:na:txt:casa:casa-cen-sem:dbs-l2-deposit-brand-yg:na&amp;gclid=Cj0KCQiAutyfBhCMARIsAMgcRJSX2gGE-JLFNjxWEMLaCHPsoWakGt4Eo4UbeAlleX5JHGyQvOzbQEUaAnCfEALw_wcB&amp;gclsrc=aw.ds</div></div><img src="https://www.dbs.com.sg/iwov-resources/media/images/deposits/savings-accounts/myaccount/myaccount-hero.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="9c06a1fe-eeb1-46e3-818e-1d689e442fac" class="bulleted-list"><li style="list-style-type:disc">We can also transfer money from the hk with the local account. I used Wise for transferring money from my hk bank account to singapore as it has lower transfer fee than bank transfer and ATM.<figure id="b3fcd16c-0a34-4aa8-b3c2-b457d46bff31"><a href="https://wise.com/invite/u/hongkit" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">You’ve been invited to Wise – Join and get a discount.</div><div class="bookmark-description">Banks sting you with hidden charges when you send or spend money internationally. But that’s yesterday’s problem. Say hello to Wise – the clever new way to move your money.</div></div><div class="bookmark-href"><img src="https://wise.com/public-resources/assets/icons/apple_touch_icon.png" class="icon bookmark-icon"/>https://wise.com/invite/u/hongkit</div></div><img src="https://wise.com/public-resources/assets/referrals/open_graph_wise.png" class="bookmark-image"/></a></figure></li></ul><p id="76cc4599-7835-451f-afea-f08c6afee726" class="">
+</p><ol type="1" id="6011abcf-7450-4a8f-86d5-9923f03e64a5" class="numbered-list" start="8"><li>Climate </li></ol><ul id="0cb1db00-e6ba-400d-a08c-f921af27f7df" class="bulleted-list"><li style="list-style-type:disc">Singapore has a tropical rainforest climate, with warm and humid weather throughout the year. The average temperature ranges from 24 to 31 degrees Celsius.</li></ul><ul id="986c2899-1117-4dd7-a6da-5dddc4b8de56" class="bulleted-list"><li style="list-style-type:disc">The climate in Singapore is similar to that of Hong Kong. Singapore have more rainfall than Hong Kong.</li></ul><ul id="068942af-dad5-4a3e-9fd8-95f84247deaa" class="bulleted-list"><li style="list-style-type:disc">I usually use the site below to check the weather<figure id="c6b0fcc2-9f2c-43f7-917e-e75543551d83"><a href="http://www.weather.gov.sg/home/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Home |</div></div><div class="bookmark-href"><img src="http://www.weather.gov.sg/favicon.ico" class="icon bookmark-icon"/>http://www.weather.gov.sg/home/</div></div></a></figure></li></ul><p id="4bf9ba18-16ff-4035-afb9-0be75c062791" class="">
+</p><ol type="1" id="55a7d04d-8134-4941-920b-06a85d70b906" class="numbered-list" start="9"><li>Health &amp; Safety</li></ol><ul id="f0d80736-f761-4b94-b381-39be9438e902" class="bulleted-list"><li style="list-style-type:disc">I recommend bring some medicine your own. There is a clinic <em>Fullerton Health</em> in NTU and you may see a doctor there.</li></ul><ul id="a6a1cbd0-96ee-493a-a088-5703317cadc7" class="bulleted-list"><li style="list-style-type:disc">Singapore is a safe country with low crime rate.</li></ul><p id="63ed7428-8e98-43b1-93b8-0b834cc6a8f6" class="">
+</p><ol type="1" id="ccb33cf2-900c-4a60-8e81-095a80504cd8" class="numbered-list" start="10"><li>Food</li></ol><ul id="4efafc26-0679-4dd7-81dc-bcafa866b61a" class="bulleted-list"><li style="list-style-type:disc">There many canteens in NTU campus which provide great variety of food. I also recommend hawker center nearby if you are tired of campus food.</li></ul><ul id="52f8c1f3-c187-4339-9d33-ef73f7a35c2f" class="bulleted-list"><li style="list-style-type:disc">There is a pantry in the hall which allow students to cook (hot and cold drinking water are available in the pantry)</li></ul><ul id="ad67f64b-edad-495a-9c51-671728f06960" class="bulleted-list"><li style="list-style-type:disc">Cates App is a app for canteen food delivery (can use paylah! for online payment)<figure id="96d208bc-66c2-4aa5-a2b8-bccac82989aa"><a href="https://cates.sg/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Download Cates</div></div><div class="bookmark-href">https://cates.sg/</div></div></a></figure></li></ul><ul id="81495123-7152-4bd8-ad39-f1be292ce121" class="bulleted-list"><li style="list-style-type:disc">I recommend Holland Village and Tanjong Pagar if you are seraching for some nice restaurants.</li></ul><div id="ea7f34ca-ea68-4ec3-8d10-485e04e6973c" class="column-list"><div id="576a6dd7-da7b-427f-ab39-4b3f45a2e658" style="width:50%" class="column"><figure id="965ca658-ef34-404b-be25-fe3c33259dab"><div class="source"><a href="https://goo.gl/maps/2RmLYzq7D8vBZ7k79">https://goo.gl/maps/2RmLYzq7D8vBZ7k79</a></div></figure></div><div id="50a203e3-535b-49ac-af50-1c9bfe5093c4" style="width:50%" class="column"><figure id="f1811f66-158c-4425-bfdb-19586e463298"><div class="source"><a href="https://goo.gl/maps/rmYkiniMPhXh4gmL6">https://goo.gl/maps/rmYkiniMPhXh4gmL6</a></div></figure></div></div><p id="8e3a1e77-5108-4d7a-85bc-5d0e866cb7de" class="">
+</p><ol type="1" id="8700b623-f8b4-4f32-8870-79a48f76f82b" class="numbered-list" start="11"><li>Transportation</li></ol><ul id="07dd2f80-d5de-4f82-a162-92ac6e63a0d3" class="bulleted-list"><li style="list-style-type:disc">Shuttle bus service is available inside the campus.<figure id="6c067c80-9e99-4296-97d7-eb69ec89ad80" class="image"><a href="General%20Study%20Abroad%20Information%20ed6d15b3db1e43e2b11af06bf9750cb1/Untitled.png"><img style="width:432px" src="General%20Study%20Abroad%20Information%20ed6d15b3db1e43e2b11af06bf9750cb1/Untitled.png"/></a></figure><figure id="3d20c1da-1a1a-41b3-9a51-88b27f209b62"><a href="https://maps.ntu.edu.sg/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">NTU</div></div><div class="bookmark-href"><img src="https://maps.ntu.edu.sg/assets/images/favicon-16x16.png" class="icon bookmark-icon"/>https://maps.ntu.edu.sg/</div></div></a><figcaption>NTU Maps (Useful to locate yourselves and the classrooms)</figcaption></figure><figure id="86b7315f-4132-49ef-abad-f03fe7991565"><a href="https://www.ntu.edu.sg/life-at-ntu/visiting-ntu/internal-campus-shuttle" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Internal Campus Shuttle</div><div class="bookmark-description">Campus Loop-Blue (CL-B) &amp; Campus Loop-Red (CL-R) circle the campus. Campus Rider (CR) ventures off-campus to and from Pioneer MRT station. On weekends and holidays, Campus Rider becomes Campus Weekend Rider with an extended route.</div></div><div class="bookmark-href"><img src="https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png" class="icon bookmark-icon"/>https://www.ntu.edu.sg/life-at-ntu/visiting-ntu/internal-campus-shuttle</div></div><img src="https://www.ntu.edu.sg/images/default-source/default-album/ntu-thehive-775x465.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="7a2fb51f-fd76-4aa1-bf1e-3b6d1ad97a8d" class="bulleted-list"><li style="list-style-type:disc">Transportation in Singapore is efficient and convenient. The Mass Rapid Transit (MRT) system is one of the way to travel around the city, and there is station located near NTU.  There are also buses available for transportation around the campus and city. </li></ul><ul id="4bff550f-e5ef-4d03-87c5-11991e5a2003" class="bulleted-list"><li style="list-style-type:disc">The student card has <em>NETS FlashPay</em>, which can be used for transportation and can be topped up at MRT stations and convenience stores. It is recommended to use public transportation as it is cost-effective <figure id="74d73abf-078d-41fc-9eb7-a5fd6749532d"><a href="https://www.lta.gov.sg/content/ltagov/en/map/fare-calculator.html" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">LTA | Fare Calculator</div><div class="bookmark-description">Calculate the total fare cost of your public transport journey around Singapore for public buses and MRT/LRT trains when using fare cards.</div></div><div class="bookmark-href"><img src="https://www.lta.gov.sg/etc/designs/ltagov/icon/apple-touch-icon-180x180.png" class="icon bookmark-icon"/>https://www.lta.gov.sg/content/ltagov/en/map/fare-calculator.html</div></div></a></figure><figure id="92d9e643-bb9a-4ade-8ff5-f0ced1edf271"><a href="https://www.transitlink.com.sg/eservice/eguide/service_idx.php" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">TransitLink eGuide - Bus Service Information</div><div class="bookmark-description">TransitLink eService</div></div><div class="bookmark-href"><img src="https://www.transitlink.com.sg/eservice/eguide/favicon.ico" class="icon bookmark-icon"/>https://www.transitlink.com.sg/eservice/eguide/service_idx.php</div></div></a></figure></li></ul><ul id="84dac3ed-3318-4a66-bf11-a6ad7bbe7502" class="bulleted-list"><li style="list-style-type:disc">Grab and Gojek are popular ride-hailing and food delivery services in Singapore. They are efficient and convenient way to get around Singapore, especially for those who prefer not to use public transportation. They can be easily accessed through their mobile apps, which is available for download on iOS and Android devices.<figure id="73be5675-ffe1-41c8-8597-59a6830a4de4"><a href="https://www.grab.com/sg/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Grab. The Everyday Everything App</div><div class="bookmark-description">Grab is Southeast Asia’s leading superapp. It provides everyday services like Deliveries, Mobility, Financial Services, and More.</div></div><div class="bookmark-href"><img src="https://www.grab.com/sg/wp-content/themes/grabsg/public/images/favicon.ico" class="icon bookmark-icon"/>https://www.grab.com/sg/</div></div><img src="https://www.grab.com/sg/wp-content/uploads/sites/4/2016/08/cropped-GC_FM_IMG_4200.jpg" class="bookmark-image"/></a></figure><figure id="910220cb-dadb-4817-99a6-3feb45a37373"><a href="https://www.gojek.com/sg/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gojek Singapore: Ride-Hailing Transport Services</div><div class="bookmark-description">Gojek Singapore is a technology startup that specialises in ride-hailing services, logistics, and digital payments. Find out more!</div></div><div class="bookmark-href"><img src="https://lelogama.go-jek.com/favicon/gojek_32px.png" class="icon bookmark-icon"/>https://www.gojek.com/sg/</div></div><img src="https://lelogama.go-jek.com/cache/ad/ac/adac20f320ab84df76b0f363511794c2.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="8d6e625b-5746-4431-a6a8-1eef7209bd77" class="bulleted-list"><li style="list-style-type:disc">To find the best price for your airline ticket, you can compare prices on Google Flights and Skyscanner.<figure id="a31decbe-5606-45a1-8f1b-abdaceb83cd0"><a href="https://www.google.com/travel/flights" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Travel</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/travel-trips-fe/travel_logo_192.png" class="icon bookmark-icon"/>https://www.google.com/travel/flights</div></div></a></figure><figure id="3ea75fa1-8209-4b07-8d90-cb4108805c1d"><a href="https://www.skyscanner.com.hk/hk/en-gb/hkd/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Compare Cheap Flights &amp; Book Airline Tickets to Everywhere | Skyscanner</div><div class="bookmark-description">Compare cheap flight prices from all major airlines and travel agents, and find the cheapest tickets to all your favourite destinations. Book online today.</div></div><div class="bookmark-href"><img src="https://www.skyscanner.com.hk/favicon.ico" class="icon bookmark-icon"/>https://www.skyscanner.com.hk/hk/en-gb/hkd/</div></div></a></figure><p id="19e313f7-26e0-4d6c-9504-9d0e16709529" class="">
+</p></li></ul><ol type="1" id="d41fe06e-3850-42cf-b5e7-59fa7097f0f2" class="numbered-list" start="12"><li>Communication</li></ol><ul id="76ae86f2-0be0-4b37-9c14-2efe55fb8fed" class="bulleted-list"><li style="list-style-type:disc">You can always stay connected with friends and family with internet connection!</li></ul><ul id="9b9cb124-69bd-431a-a1b8-48a2bd614924" class="bulleted-list"><li style="list-style-type:disc">Here is information about Wifi Connection in NTU.<figure id="375ab63b-0c20-4c68-ad70-d248780e2b2a"><a href="https://www.ntu.edu.sg/life-at-ntu/internet-account-and-policy/how-to-login-to-the-ntu-wireless-network#Content_C026_Col00" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How to login to the NTU wireless network</div><div class="bookmark-description">If you are a student, staff or alumnus, your NTU network account can be used to login to the wireless network in the campus</div></div><div class="bookmark-href"><img src="https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png" class="icon bookmark-icon"/>https://www.ntu.edu.sg/life-at-ntu/internet-account-and-policy/how-to-login-to-the-ntu-wireless-network#Content_C026_Col00</div></div><img src="https://www.ntu.edu.sg/images/default-source/default-album/ntu-thehive-775x465.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="ffbe00aa-4c4a-4aa0-b4b8-08b7cd63dd75" class="bulleted-list"><li style="list-style-type:disc">SIM Card<ul id="6e5810e8-a6c9-474e-b2e1-66ee063821c4" class="bulleted-list"><li style="list-style-type:circle"><em>Singtel, M1, StarHub, </em>and<em> TPG </em>are 4 major telecoms in Singapore</li></ul><ul id="7cd3585e-170d-432b-a7d2-3d54be4e7a69" class="bulleted-list"><li style="list-style-type:circle">Prepaid SIM Card can be bought at the airport but i do not recommend since it is not economical and there is only SGD$50 prepaid SIM available at the airport (which may bring some risks if you pay for 50 SGD for the SIM at once)</li></ul><ul id="57cc5d83-d758-4ed6-8024-f856d66d86bb" class="bulleted-list"><li style="list-style-type:circle">I recommend <em>StarHub</em> as it is the second largest telecom company in Singapore and its plan are quite economical. I recommend buying the SGD$15 SIM card at StarHub Shops. Remember to bring your passport with you when buy the SIM.<figure id="38ee0c2b-1a4d-4c10-8d16-9e83bb9cd1c2"><a href="https://www.starhub.com/personal/mobile/mobile-phones-plans/prepaid-cards/happy-prepaid-sim.html" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Happy Prepaid SIM Cards | StarHub Mobile</div><div class="bookmark-description">Looking to get a prepaid SIM card in Singapore? The Prepaid SIM Card might just be the perfect solution to your prepaid needs. Find out more now!</div></div><div class="bookmark-href"><img src="https://www.starhub.com/etc/designs/starhub/en/favicon.ico" class="icon bookmark-icon"/>https://www.starhub.com/personal/mobile/mobile-phones-plans/prepaid-cards/happy-prepaid-sim.html</div></div></a></figure></li></ul><ul id="3d376a79-42f4-4fe7-8586-6867d710ac5f" class="bulleted-list"><li style="list-style-type:circle">I bought <em>Singtel</em> $15 prepaid card in convenience store for my first SIM in Singapore. The application and verification procedure of the card can be done using the app. The data plans of <em>Singtel</em> are not as good as that of <em>Starhub.</em></li></ul></li></ul><ul id="540fa14b-354d-4d11-97f2-c7960c701058" class="bulleted-list"><li style="list-style-type:disc">Telegram<ul id="ec75377d-5de1-49a3-b38d-cc940fe9efa1" class="bulleted-list"><li style="list-style-type:circle">Telegram is one of the most commonly used communication tools, so i recommend having a telegram account before arriving Singapore</li></ul><ul id="ce56f144-449c-483d-9791-921274ca1194" class="bulleted-list"><li style="list-style-type:circle">There are lots of public NTU telegram group which are useful and convenient:<figure id="2b3fee4f-11b7-415c-b9d2-f4ecef88e5ad"><a href="https://t.me/NTULostandFound" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">NTU Lost&amp;Found</div><div class="bookmark-description">🔊 NTU LOST AND FOUND GROUP 🔊	** PLEASE CENSOR IC/BANK CARD NUMBERS** 	Help make the NTU community a more helpful and conducive one.</div></div><div class="bookmark-href"><img src="https://telegram.org/img/apple-touch-icon.png" class="icon bookmark-icon"/>https://t.me/NTULostandFound</div></div><img src="https://cdn5.telegram-cdn.org/file/hj7dd_J2HLXfV5y9jmxhOe88ga5-_oIVz2bRlXnhjYlaF8MQhltnQ5e1T9MwhnwACjID2iSGBIcQh36TFgeHHTMbUPDrbQrwP_zPPw6Rtqnb4iXQIe6rC1HTWZ5LeuNKp8RpoJzaGypTHl-fGW1rO9ts16FK8jYu3ObocLhm5OdCG7qZWFHxAnz9XPhQyF3tPkgZx7u-p1lD60v7gVDe9-c053kie2Ackslx94NCZ8_D3mwIsA5o9EmGoMcZsnBaWbP3Xp-a8uh8iT-9YuqTSUJTwA5HnFh63rT2lDtMdofNJpYlaUb8d_Ttu37mGT6iBKAXEXrXcxNlGGKshT7kcQ.jpg" class="bookmark-image"/></a></figure><figure id="1a7e860b-a716-419d-97b1-b841da0c0715"><a href="https://t.me/ntumarketplace" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">NTU Marketplace</div><div class="bookmark-description">Welcome to NTU Marketplace		Read pinned message for instructions and rules.</div></div><div class="bookmark-href"><img src="https://telegram.org/img/apple-touch-icon.png" class="icon bookmark-icon"/>https://t.me/ntumarketplace</div></div><img src="https://cdn5.telegram-cdn.org/file/Xxu_gA0TgcC44hPyPpUYBhVY6Er_5CQR0sAY9hvQcZ2i9RzY44Vqis5GHkJpkMe2dfxnAq8apZe9TEW_6p3iH4fTtc62AiOJaqF6T9saG8yTHsA9_94rvlzgTCrqfkusIKg6BAICllHKIxWZMM6TeI2a1tdo_RzeU5vnF48_UgT66ELZ-jEhjFghIhX0SIdA-1SYCXRF83DHlW4cu0MHE3uWhz-ZKSuQ9LLJltF4LWk-qXQC-AVwPS_8PiMS98nUd9iNV7Fu2B6lGIMt3FxqMzODkSaR6FiDNTufnFI8xXQ_GUBFkQ5VLd_aOkfG8ZmQkPkJw4x4mGT_o9YRh_kaDg.jpg" class="bookmark-image"/></a></figure><figure id="56a3b1e1-c27c-4d87-aba3-a556b2601041"><a href="https://t.me/ntuthriftshop" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">NTU ThriftShop</div><div class="bookmark-description">Only sale of clothes are allowed. Keep chatting to a minimal to prevent spam.		Read the pinned messages. If you do not follow the rules, your post will be deleted and you will be banned.</div></div><div class="bookmark-href"><img src="https://telegram.org/img/apple-touch-icon.png" class="icon bookmark-icon"/>https://t.me/ntuthriftshop</div></div><img src="https://cdn5.telegram-cdn.org/file/hKJGqtkLfSlc6MqE5duRLoX3iZP326n_6s08sqhMg5SOggZ3QYX5jzJ9-cBOLYyRLuNfLZqT1tU_ODSPIHwoGRebOXEBbSX8Gv0hqlsy_-MEJhl2wI4b0Dmu-N2z2_tINNuMTltRjuQB0paesIaUvFmp9b6iq11Lf4tsJfSoGo1PqfE9CC5yrsupel_cCsy6tA2eOFQsxvGEPTVSWAz6HzGv-MOepKVBXHa4txC71pNqNI5d3A79Ro6n0p2P6oAQrZ40aaVLLWaKcH-Ojhm0xcbMFNxbWw1x8kySXWKIJgP-2BaRqZfS6rUqNjhiZXX5Qwd1ZBOmp5YpU_dfikN3aQ.jpg" class="bookmark-image"/></a></figure><figure id="297a84c6-f5ab-4968-9e60-c06d4b32a26b"><a href="https://t.me/raydyntu" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Raydy NTU</div><div class="bookmark-description">Join us for convenient and affordable supper deliveries 🤟🏻👌🏻</div></div><div class="bookmark-href"><img src="https://telegram.org/img/apple-touch-icon.png" class="icon bookmark-icon"/>https://t.me/raydyntu</div></div><img src="https://cdn5.telegram-cdn.org/file/uyI4ffQaHnl86ALJU0Pmtii4SHOhYsSRHemFYUsUq2RO2QMbhCLTO93Nv0ocvTr_PiIR9CSOa5cXpO94uXWK7cqMq7bUomusRHGWVaOh3kblbMchiNhxmgEtyCTJoqQ9zOGb3Gy93wv8UHmHl1CERQYJ3eN9YUFl1dhVrl9QGm96TbkqsMnYjqh6eRSyiV-XhzfAXxysO7k2_tbV_SoMwL6mhzBewYWjLRKs4ZFhwvINQCoxKlKgKUmaGmHWIg4yX2kxdm8hVdwRV1pbEOGY-epDbNcPMdHzRBHWtQ-q4n3yEGRE-Y_iKOyq2kCDwhR0NmlVu9KfRLPDbwxEBpDviQ.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="c25aa340-1d8f-4856-a89a-4910a9fb0247" class="bulleted-list"><li style="list-style-type:circle">Not really “useful”, but my favourite NTU telegram group😻:<figure id="624ae7ca-67c1-4039-bd0a-0ef1b240f51a"><a href="https://t.me/meowsofntu" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">✨✨ meows of ntu ✨✨</div><div class="bookmark-description">Hello! Welcome to ✨✨ meows of ntu ✨✨, proudly created and managed by NTU Cat Management Network. This is a group for the NTU community to share photos of our cute campus cats with one another! Enjoy and have a meowy good day ❤️ Follow us on @ntucmn on ig!</div></div><div class="bookmark-href"><img src="https://telegram.org/img/apple-touch-icon.png" class="icon bookmark-icon"/>https://t.me/meowsofntu</div></div><img src="https://cdn5.telegram-cdn.org/file/stK4x6Z_0axEXezyK-2ZyN8IxR0AVmk1OTpOTmjJ7X611tc49FM8X4EIrO5JGNnn95tF3jFT13yi0SVOtbk2H7S0ez6TsTbQr0WO44anF3xHRhWAg8eqTM5JAVhhd1mS7K8T1IdxKi9pHxjU3MD2A9tYIBOflHEaAffbJze7QoKo5EgkJEJ_ihuMgfs3Rp3_1YPxQdt3-8RDGnaXI7UH52J7a714m5DckbL5-4_vYTuLFeKJRtSsQu-VllQ1GHX0icxlVUF88LwxayGazv4-W9opQXiljXOzWzjZJu3LNhR9iFdMml_0c3smZ0P9IS-k9UI14QxASouhjQNHcuJ7vw.jpg" class="bookmark-image"/></a></figure></li></ul></li></ul><ul id="6a508b1e-1133-4dfd-b539-376f4d51c021" class="bulleted-list"><li style="list-style-type:disc">Language<ul id="e4f5d48d-0b7d-4cc7-ad1f-8de8d7303997" class="bulleted-list"><li style="list-style-type:circle">English and Mandarin are the most commonly used language in Singapore.</li></ul></li></ul><p id="39ef010f-15eb-488f-b1db-95d7ecfa1fa7" class="">
+</p><ol type="1" id="5fc8dc29-3013-4193-8ff9-3963e0f98c84" class="numbered-list" start="13"><li>Sports &amp; Recreation Facilities<ul id="d93f237b-9840-4779-a96b-ee5a6cf04f27" class="bulleted-list"><li style="list-style-type:disc">There are plenty of sports and recreation facilities in NTU, e.g. swimming pool, tennis court, Yunnan Garden, etc<figure id="bfaa582c-802e-42c0-b586-1139c7188282"><a href="https://www.ntu.edu.sg/life-at-ntu/recreational-spaces-facilities" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Recreational Spaces &amp; Facilities</div><div class="bookmark-description">Find out more about the features in NTU, hailed as one of the world&#x27;s most beautiful campuses.</div></div><div class="bookmark-href"><img src="https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png" class="icon bookmark-icon"/>https://www.ntu.edu.sg/life-at-ntu/recreational-spaces-facilities</div></div><img src="https://www.ntu.edu.sg/images/default-source/default-album/ntu-thehive-775x465.jpg" class="bookmark-image"/></a></figure></li></ul></li></ol><p id="1f39a019-5223-4bd0-8e17-d9d9bcdcc5af" class="">
+</p><ol type="1" id="bf973d63-e571-4a8a-8394-0f5e8648e893" class="numbered-list" start="14"><li>Social Clubs &amp; Networking Opportunities<ul id="fdd46097-5a45-4c93-93e8-6616b6e2c0ca" class="bulleted-list"><li style="list-style-type:disc">There are also lots of student clubs and societies for students to join at NTU. You may look for the clubs that you are interested during the orientation.<figure id="34e10844-182b-4195-8113-9c29d13ae5ba"><a href="https://wcms-prod-admin.ntu.edu.sg/orientation/getting-ready" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Getting Ready for Freshmen Orientation 2022</div><div class="bookmark-description">Get ready for an unforgettable freshmen experience. Find all the information you need for a smooth transition to NTU.</div></div><div class="bookmark-href"><img src="https://wcms-prod-admin.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png" class="icon bookmark-icon"/>https://wcms-prod-admin.ntu.edu.sg/orientation/getting-ready</div></div><img src="https://wcms-prod-admin.ntu.edu.sg/images/default-source/ntu-freshmen-orientation-2021/get-started-edit.png?sfvrsn=459bb2fc_3" class="bookmark-image"/></a></figure></li></ul><p id="67da4322-70fc-44f0-80b9-1c2a4b537ab3" class="">
+</p></li></ol><ol type="1" id="2ad3ed0a-0939-4ec4-b6f5-1c7ba6574d50" class="numbered-list" start="15"><li>Cautionary measures<ul id="cd3b6601-614e-41a7-bc33-a1458fba1c3b" class="bulleted-list"><li style="list-style-type:disc">Not many special items have to be cautious about. Simply respect everyone and enjoy your exchange!</li></ul></li></ol><p id="5e48e767-af08-4a00-b224-c743efef1f37" class="">
+</p><p id="d76a0dfb-9608-42fc-8f54-4f94f566e4f7" class=""><a href="../Here%20is%20KI~%2099580d5a980c4f02987e4f561bac239a.html">✨Back to Home</a></p><p id="e78279b5-7934-45f2-90bf-6aefc66e55e1" class="">
+</p></div></article></body></html>
