@@ -19,8 +19,31 @@ document.addEventListener("DOMContentLoaded", function () {
  * Initialize smooth scrolling for anchor links
  */
 function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  // Get all anchor links except those in the mobile navigation menu
+  // This prevents conflicts with the special mobile navigation handling
+  const anchors = Array.from(document.querySelectorAll('a[href^="#"]')).filter(
+    (link) => !link.closest(".main-nav")
+  );
+
+  anchors.forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // Footer links should work the same way as well
+  document.querySelectorAll('.footer-links a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
 
       const targetId = this.getAttribute("href");
@@ -128,9 +151,6 @@ function initMobileNav() {
   // Console log to debug
   console.log("Mobile nav initialized. Toggle button:", mobileNavToggle);
 
-  // Get the overlay element
-  const navOverlay = document.querySelector(".nav-overlay");
-
   // Toggle navigation when the button is clicked
   mobileNavToggle.addEventListener("click", function (e) {
     e.preventDefault();
@@ -186,19 +206,49 @@ function initMobileNav() {
     }, 300); // Match this with the CSS transition time
   };
 
-  // Close menu when overlay is clicked
-  if (navOverlay) {
-    navOverlay.addEventListener("click", closeNavigation);
-  }
-
   // Close navigation when a link is clicked
   navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      if (window.innerWidth <= 768) {
-        closeNavigation();
-      }
-    });
+    // Remove any existing click handlers to prevent duplicates
+    link.removeEventListener("click", navLinkHandler);
+
+    // Add the click handler
+    link.addEventListener("click", navLinkHandler);
   });
+
+  // Handler function for navigation links
+  function navLinkHandler(e) {
+    if (window.innerWidth <= 768) {
+      // Prevent the default scroll behavior
+      e.preventDefault();
+      e.stopPropagation();
+
+      console.log("Nav link clicked in mobile view");
+
+      // Get the target section
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+
+      if (!targetElement) {
+        console.warn("Target element not found:", targetId);
+        return;
+      }
+
+      // Close the menu first with a very short delay
+      setTimeout(() => {
+        closeNavigation();
+        console.log("Navigation closed");
+
+        // Then scroll to the section after the menu starts closing
+        setTimeout(() => {
+          console.log("Scrolling to:", targetId);
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: "smooth",
+          });
+        }, 300);
+      }, 50);
+    }
+  }
 
   // Close navigation when clicking outside
   document.addEventListener("click", function (e) {

@@ -158,11 +158,16 @@ header.sticky .profile-tagline {
 header.sticky .main-nav {
   position: fixed; /* Keep it fixed even in sticky mode for mobile */
   padding: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for visibility */
   display: flex;
   align-items: center;
   margin-left: auto;
   margin-right: 20px;
+  height: auto; /* Ensure height is auto, not 100vh */
+  width: auto; /* Ensure width is auto for desktop */
+  bottom: auto; /* Reset bottom position */
+  top: 0; /* Position at top of sticky header */
+  z-index: 101; /* Ensure it stays on top of other elements */
 }
 
 header.sticky .main-nav ul {
@@ -171,6 +176,36 @@ header.sticky .main-nav ul {
 
 header.sticky .main-nav li {
   margin: 0 10px;
+}
+
+header.sticky .main-nav a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+header.sticky .main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+@media (min-width: 769px) {
+  /* Desktop navigation in sticky mode */
+  header.sticky .main-nav {
+    width: auto;
+    position: fixed;
+    right: 0;
+    left: auto;
+    top: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background for visibility */
+    z-index: 101;
+  }
 }
 
 @media (max-width: 768px) {
@@ -212,7 +247,14 @@ header.sticky .main-nav li {
 
   .main-nav a {
     display: block;
-    padding: 10px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .main-nav a:active {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   header.sticky .mobile-nav-toggle {
@@ -225,11 +267,13 @@ header.sticky .main-nav li {
     /* Ensure these styles don't conflict with mobile menu positioning */
     position: fixed;
     top: 0;
+    right: -300px; /* Start offscreen */
     margin: 0;
     width: 250px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
+    z-index: 999; /* Ensure this is high enough */
   }
 
   header.sticky .main-nav.show {
@@ -237,29 +281,23 @@ header.sticky .main-nav li {
     visibility: visible;
   }
 
+  /* Override styles for links in sticky mobile mode */
+  header.sticky .main-nav a {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  header.sticky .main-nav a:hover,
+  header.sticky .main-nav a:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
   body.nav-open {
     overflow: hidden;
-  }
-
-  /* Mobile menu overlay */
-  .nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    pointer-events: none; /* Allow clicks to pass through when invisible */
-  }
-
-  body.nav-open .nav-overlay {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto; /* Capture clicks when visible */
   }
 }
 
