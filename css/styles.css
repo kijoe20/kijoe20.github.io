@@ -100,11 +100,11 @@ header.sticky .profile-tagline {
 /* Navigation */
 .main-nav {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
   z-index: 3;
   transition: all 0.3s ease;
 }
@@ -195,16 +195,23 @@ header.sticky .main-nav a:hover {
 @media (min-width: 769px) {
   /* Desktop navigation in sticky mode */
   header.sticky .main-nav {
-    width: auto;
+    width: 100%;
     position: fixed;
-    right: 0;
-    left: auto;
+    left: 0;
     top: 0;
     height: 80px;
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Add background for visibility */
+    background-color: transparent;
     z-index: 101;
+  }
+
+  header.sticky .main-nav ul {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: flex-end;
   }
 }
 
@@ -324,7 +331,6 @@ header.sticky .main-nav a:hover {
 .profile-info {
   position: relative;
   z-index: 2;
-  transform: translateY(40px);
 }
 
 .profile-pic {
@@ -365,6 +371,7 @@ header.sticky .main-nav a:hover {
 main {
   position: relative;
   margin-top: -60px;
+  padding-top: 60px;
   padding-bottom: 50px;
   transition: padding-top 0.5s ease;
 }
