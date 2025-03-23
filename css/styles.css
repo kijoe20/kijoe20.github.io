@@ -156,7 +156,7 @@ header.sticky .profile-tagline {
 }
 
 header.sticky .main-nav {
-  position: static;
+  position: fixed; /* Keep it fixed even in sticky mode for mobile */
   padding: 0;
   background-color: transparent;
   display: flex;
@@ -188,7 +188,7 @@ header.sticky .main-nav li {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 80px 0 0 0;
-    transition: right 0.3s ease;
+    transition: right 0.3s ease, visibility 0.3s ease;
     z-index: 999;
     overflow-y: auto;
     visibility: hidden;
@@ -217,10 +217,24 @@ header.sticky .main-nav li {
 
   header.sticky .mobile-nav-toggle {
     top: 15px;
+    right: 20px;
   }
 
   header.sticky .main-nav {
     padding-top: 60px;
+    /* Ensure these styles don't conflict with mobile menu positioning */
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+  }
+
+  header.sticky .main-nav.show {
+    right: 0;
+    visibility: visible;
   }
 
   body.nav-open {
@@ -239,11 +253,13 @@ header.sticky .main-nav li {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none; /* Allow clicks to pass through when invisible */
   }
 
   body.nav-open .nav-overlay {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto; /* Capture clicks when visible */
   }
 }
 

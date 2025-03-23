@@ -136,12 +136,19 @@ function initMobileNav() {
     e.preventDefault();
     e.stopPropagation();
 
+    // Force visibility before toggling class to ensure transitions work
+    if (!mainNav.classList.contains("show")) {
+      mainNav.style.visibility = "visible";
+    }
+
     mainNav.classList.toggle("show");
     body.classList.toggle("nav-open");
 
     console.log(
       "Toggle clicked. Menu visible:",
-      mainNav.classList.contains("show")
+      mainNav.classList.contains("show"),
+      "Sticky header:",
+      document.querySelector("header").classList.contains("sticky")
     );
 
     // Change the icon based on state
@@ -152,31 +159,43 @@ function initMobileNav() {
     } else {
       icon.classList.remove("fa-times");
       icon.classList.add("fa-bars");
+
+      // Add a small delay before hiding the menu completely
+      setTimeout(() => {
+        if (!mainNav.classList.contains("show")) {
+          mainNav.style.visibility = "";
+        }
+      }, 300); // Match this with the CSS transition time
     }
   });
 
+  // Helper function for closing the navigation
+  const closeNavigation = function () {
+    mainNav.classList.remove("show");
+    body.classList.remove("nav-open");
+
+    const icon = mobileNavToggle.querySelector("i");
+    icon.classList.remove("fa-times");
+    icon.classList.add("fa-bars");
+
+    // Add a small delay before hiding the menu completely
+    setTimeout(() => {
+      if (!mainNav.classList.contains("show")) {
+        mainNav.style.visibility = "";
+      }
+    }, 300); // Match this with the CSS transition time
+  };
+
   // Close menu when overlay is clicked
   if (navOverlay) {
-    navOverlay.addEventListener("click", function () {
-      mainNav.classList.remove("show");
-      body.classList.remove("nav-open");
-
-      const icon = mobileNavToggle.querySelector("i");
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
-    });
+    navOverlay.addEventListener("click", closeNavigation);
   }
 
   // Close navigation when a link is clicked
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       if (window.innerWidth <= 768) {
-        mainNav.classList.remove("show");
-        body.classList.remove("nav-open");
-
-        const icon = mobileNavToggle.querySelector("i");
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
+        closeNavigation();
       }
     });
   });
@@ -189,12 +208,7 @@ function initMobileNav() {
       !mainNav.contains(e.target) &&
       !mobileNavToggle.contains(e.target)
     ) {
-      mainNav.classList.remove("show");
-      body.classList.remove("nav-open");
-
-      const icon = mobileNavToggle.querySelector("i");
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
+      closeNavigation();
     }
   });
 }
