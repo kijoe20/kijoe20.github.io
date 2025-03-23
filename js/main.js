@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize mobile navigation
   initMobileNav();
-
-  // Contact form handling
-  initContactForm();
 });
 
 /**
@@ -81,37 +78,6 @@ function initScrollAnimations() {
     }
   `;
   document.head.appendChild(style);
-}
-
-/**
- * Initialize contact form handling
- */
-function initContactForm() {
-  const contactForm = document.getElementById("contactForm");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // In a real application, you would send the form data to a server
-      const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-      };
-
-      console.log("Form submission:", formData);
-
-      // Show success message (in a real app, this would happen after server response)
-      alert(
-        "Thank you for your message! This is a demo form and does not actually send messages yet."
-      );
-
-      // Reset form
-      this.reset();
-    });
-  }
 }
 
 /**
