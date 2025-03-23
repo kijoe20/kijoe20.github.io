@@ -156,10 +156,27 @@ function initMobileNav() {
 
   if (!mobileNavToggle) return;
 
+  // Ensure menu is hidden on page load
+  mainNav.classList.remove("show");
+
+  // Console log to debug
+  console.log("Mobile nav initialized. Toggle button:", mobileNavToggle);
+
+  // Get the overlay element
+  const navOverlay = document.querySelector(".nav-overlay");
+
   // Toggle navigation when the button is clicked
-  mobileNavToggle.addEventListener("click", function () {
+  mobileNavToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     mainNav.classList.toggle("show");
     body.classList.toggle("nav-open");
+
+    console.log(
+      "Toggle clicked. Menu visible:",
+      mainNav.classList.contains("show")
+    );
 
     // Change the icon based on state
     const icon = this.querySelector("i");
@@ -171,6 +188,18 @@ function initMobileNav() {
       icon.classList.add("fa-bars");
     }
   });
+
+  // Close menu when overlay is clicked
+  if (navOverlay) {
+    navOverlay.addEventListener("click", function () {
+      mainNav.classList.remove("show");
+      body.classList.remove("nav-open");
+
+      const icon = mobileNavToggle.querySelector("i");
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
+    });
+  }
 
   // Close navigation when a link is clicked
   navLinks.forEach((link) => {
